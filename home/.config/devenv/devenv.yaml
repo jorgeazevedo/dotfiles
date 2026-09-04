@@ -1,0 +1,11 @@
+plugins:
+  vscode:
+    - "com.github.copilot"
+    - "fuadpashayev.bottom-terminal"
+  intellij:
+    - "GitHub.copilot"
+    - "com.mallowigi"
+dotfiles:
+  repository: "https://github.com/jorgeazevedo/dotfiles"
+  targetPath: "~/dotfiles"
+  installCommand: "./install-devcontainer.sh"

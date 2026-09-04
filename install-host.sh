@@ -7,3 +7,7 @@ mkdir -p ~/.config/devenv
 ln -sf "$PWD/home/.config/devenv/devenv.yaml" ~/.config/devenv/devenv.yaml
 
 ln -sf "$PWD/home/.zshrc" ~/.zshrc
+
+ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
+
+brew bundle --global

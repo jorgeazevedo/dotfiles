@@ -1,0 +1,9 @@
+**/.claude/settings.local.json
+
+# macOS Finder / system junk
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.fseventsd

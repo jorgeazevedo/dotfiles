@@ -1,0 +1,7 @@
+# Layered on top of .Brewfile by install-personal.sh.
+brew "googleworkspace-cli"
+
+cask "claude-code"
+cask "codex"
+cask "qbittorrent"
+cask "vlc"

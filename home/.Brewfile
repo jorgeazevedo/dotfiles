@@ -10,7 +10,7 @@ brew "wget"
 cask "1password"
 cask "1password-cli"
 cask "google-chrome"
-cask "macvim"
+cask "macvim-app"
 cask "visual-studio-code"
 
 vscode "fuadpashayev.bottom-terminal"

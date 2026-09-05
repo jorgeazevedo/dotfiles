@@ -14,3 +14,6 @@ tell application "Terminal"
 	set startup settings to settings set "Pro"
 end tell
 APPLESCRIPT
+# This means that option+backspace deletes a full word, for example
+plutil -replace 'Window Settings.Pro.useOptionAsMetaKey' -bool true \
+	~/Library/Preferences/com.apple.Terminal.plist

@@ -11,6 +11,8 @@ ln -sf "$PWD/home/.config/mise/config.toml" ~/.config/mise/config.toml
 
 ln -sf "$PWD/home/.zshrc" ~/.zshrc
 
+ln -sf "$PWD/home/.gvimrc" ~/.gvimrc
+
 ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 
 brew bundle --global

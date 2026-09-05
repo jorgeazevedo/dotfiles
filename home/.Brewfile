@@ -9,6 +9,7 @@ brew "wget"
 
 cask "1password"
 cask "1password-cli"
+cask "font-source-code-pro"
 cask "google-chrome"
 cask "macvim-app"
 cask "visual-studio-code"

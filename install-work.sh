@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Everything install-host.sh does, plus the work-only apps.
+# Everything install-host.sh does, plus the work-only apps and identity.
 # Run this from the dotfiles repo root, on a work Mac.
 set -euo pipefail
 
@@ -8,3 +8,10 @@ set -euo pipefail
 ln -sf "$PWD/home/.Brewfile.work" ~/.Brewfile.work
 
 brew bundle --file ~/.Brewfile.work
+
+# Identity: work by default, overridden under ~/code/jorgeazevedo.
+# Clear any personal overlay from a previous install-personal.sh run on this
+# machine -- a stale one is not "missing", so git would still apply it.
+rm -f ~/.config/git/config.personal
+ln -sf "$PWD/home/.config/git/identity/guardian" ~/.config/git/identity/guardian
+ln -sf "$PWD/home/.config/git/config.work" ~/.config/git/config.work

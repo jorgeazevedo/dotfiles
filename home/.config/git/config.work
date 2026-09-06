@@ -1,0 +1,10 @@
+; Work machine. Linked by install-work.sh.
+; Default identity first, then per-directory overrides -- last match wins.
+[include]
+	path = identity/guardian
+
+[includeIf "gitdir:~/code/guardian/"]
+	path = identity/guardian
+
+[includeIf "gitdir:~/code/jorgeazevedo/"]
+	path = identity/jorgeazevedo

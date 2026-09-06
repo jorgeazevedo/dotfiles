@@ -1,0 +1,36 @@
+; Shared by every machine. Git reads this as $XDG_CONFIG_HOME/git/config, but
+; only while ~/.gitconfig does not exist -- if one ever appears, git reads it as
+; well and it WINS for single-valued settings like user.email. If identities
+; ever go strange, check for a stray ~/.gitconfig first.
+;
+; Identity lives in the machine-class overlays included at the bottom.
+; Never put a [user] name or email in this file.
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+; Refuse to commit rather than inventing an identity from username@hostname.
+; Without this, a machine whose overlay never got linked silently authors
+; commits as something like jorgeazevedo@Jorges-MacBook.local.
+[user]
+	useConfigOnly = true
+
+; Reach the jorgeazevedo GitHub account through its own SSH key, since the
+; default key belongs to a different account. Needs a matching "Host github-ja"
+; block in ~/.ssh/config. Left unconditional so that it applies at clone time
+; too, when there is no gitdir yet for an includeIf to match against.
+[url "git@github-ja:jorgeazevedo/"]
+	insteadOf = git@github.com:jorgeazevedo/
+
+; Include paths are relative to this file, i.e. to ~/.config/git/.
+; install-personal.sh / install-work.sh links exactly one of these and removes
+; the other. Git ignores an include whose file does not exist.
+[include]
+	path = config.personal
+	path = config.work

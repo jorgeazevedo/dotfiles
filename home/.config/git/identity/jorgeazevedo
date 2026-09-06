@@ -1,0 +1,5 @@
+; GitHub account "jorgeazevedo". Used on every machine for ~/code/jorgeazevedo,
+; paired with the github-ja SSH alias.
+[user]
+	name = Jorge Azevedo
+	email = jorge.amado.azevedo@gmail.com

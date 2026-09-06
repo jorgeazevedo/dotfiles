@@ -1,0 +1,10 @@
+; Personal machine. Linked by install-personal.sh.
+; Default identity first, then per-directory overrides -- last match wins.
+[include]
+	path = identity/ceno
+
+[includeIf "gitdir:~/code/ceno/"]
+	path = identity/ceno
+
+[includeIf "gitdir:~/code/jorgeazevedo/"]
+	path = identity/jorgeazevedo

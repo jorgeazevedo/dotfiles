@@ -10,3 +10,10 @@ PROMPT='%D{%H:%M:%S} %1~ $ '
 ports() {
   lsof -iTCP -sTCP:LISTEN -P -n
 }
+
+# Serve the current directory over HTTP; defaults to port 8000.
+serve() {
+  local port=${1:-8000}
+  echo "Serving on http://localhost:$port"
+  python3 -m http.server "$port"
+}

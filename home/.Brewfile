@@ -12,6 +12,7 @@ cask "1password-cli"
 cask "font-source-code-pro"
 cask "google-chrome"
 cask "macvim-app"
+cask "raycast"
 cask "visual-studio-code"
 
 vscode "firsttris.vscode-jest-runner"

@@ -34,5 +34,6 @@ ln -sf "$PWD/home/.gvimrc" ~/.gvimrc
 ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 
 ./macos/install-terminal.sh
+./macos/install-keyboard.sh
 
 brew bundle --global

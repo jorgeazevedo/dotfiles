@@ -8,6 +8,9 @@
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	latest = !git checkout main && git pull
+	cia = !git branch --merged origin/main | grep -vE \"^\\s*(\\*|main|develop)\" | xargs -n 1 git branch -d
+	cia2 = "!git for-each-ref --merged origin/main --format='%(refname:short) %(worktreepath)' refs/heads/ | awk 'NF==1 {print $1}' | grep -vxE 'main|develop' | xargs -r -n 1 git branch -d"
 
 [color]
 	branch = auto
@@ -17,6 +20,12 @@
 
 [core]
 	editor = vim
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
 
 ; Refuse to commit rather than inventing an identity from username@hostname.
 ; Without this, a machine whose overlay never got linked silently authors

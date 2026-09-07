@@ -1,4 +1,5 @@
 # Layered on top of .Brewfile by install-work.sh.
+brew "gcloud-cli"
 cask "docker-desktop"
 cask "intellij-idea" # Ultimate edition; the Community one is intellij-idea-ce
 

@@ -9,6 +9,10 @@ ln -sf "$PWD/home/.Brewfile.work" ~/.Brewfile.work
 
 brew bundle --file ~/.Brewfile.work
 
+mkdir -p ~/.config/gcloud/configurations
+ln -sf "$PWD/home/.config/gcloud/configurations/config_default" \
+	~/.config/gcloud/configurations/config_default
+
 # Identity: work by default, overridden under ~/code/jorgeazevedo.
 # Clear any personal overlay from a previous install-personal.sh run on this
 # machine -- a stale one is not "missing", so git would still apply it.

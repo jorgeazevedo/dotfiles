@@ -1,0 +1,8 @@
+[core]
+project = datatech-platform-code
+
+[compute]
+region = europe-west2
+
+[run]
+region = europe-west2

@@ -1,3 +1,5 @@
 # Layered on top of .Brewfile by install-work.sh.
 cask "docker-desktop"
 cask "intellij-idea" # Ultimate edition; the Community one is intellij-idea-ce
+
+vscode "ms-vscode-remote.remote-containers"

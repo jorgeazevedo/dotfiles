@@ -27,6 +27,8 @@ ln -sf "$PWD/home/.config/git/config" ~/.config/git/config
 # Used by both machine classes, for ~/code/jorgeazevedo.
 ln -sf "$PWD/home/.config/git/identity/jorgeazevedo" ~/.config/git/identity/jorgeazevedo
 
+ln -sfn "$PWD/home/.copilot" ~/.copilot
+
 ln -sf "$PWD/home/.zshrc" ~/.zshrc
 
 ln -sf "$PWD/home/.gvimrc" ~/.gvimrc

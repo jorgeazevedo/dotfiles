@@ -10,3 +10,6 @@ cp home/.bash_aliases ~/.bash_aliases
 
 mkdir -p ~/.config/git
 cp -R home/.config/git/. ~/.config/git/
+
+mkdir -p ~/.copilot
+cp -R home/.copilot/. ~/.copilot/

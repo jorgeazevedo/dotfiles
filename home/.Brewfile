@@ -2,8 +2,10 @@
 # .Brewfile.personal and .Brewfile.work.
 brew "gh"
 brew "mise"
+brew "telnet"
 brew "tig"
 brew "tmux"
+brew "tree"
 brew "unar"
 brew "wget"
 

@@ -1,4 +1,9 @@
 # Layered on top of .Brewfile by install-work.sh.
+tap "guardian/devtools"
+
+brew "guardian/devtools/dev-nginx"
+
+cask "guardian/devtools/gu-base"
 cask "gcloud-cli"
 cask "docker-desktop"
 cask "intellij-idea" # Ultimate edition; the Community one is intellij-idea-ce

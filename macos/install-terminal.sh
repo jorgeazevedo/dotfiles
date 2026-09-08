@@ -10,6 +10,7 @@ osascript <<'APPLESCRIPT'
 tell application "Terminal"
 	set font name of settings set "Pro" to "SourceCodePro-Regular"
 	set font size of settings set "Pro" to 14
+	set font antialiasing of settings set "Pro" to true
 	set default settings to settings set "Pro"
 	set startup settings to settings set "Pro"
 end tell

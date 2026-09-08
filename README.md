@@ -34,3 +34,11 @@ rsync -aHAX --partial --progress \
   --exclude 'node_modules/' --exclude '.venv/' --exclude '._*' \
   ~/code/ user@192.168.0.1:~/code/
 ```
+
+On the target mac the following commands will be useful
+```bash
+sudo systemsetup -setremotelogin on          # or System Settings ▸ General ▸ Sharing ▸ Remote Login
+scutil --get LocalHostName
+ipconfig getifaddr en0
+whoami      
+```

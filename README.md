@@ -22,3 +22,15 @@ The emoji picker picker needs to set manually to ctrl-cmd-space in raycast
 
 It'd useful to go the MacOS Keyboard shortcuts settings and disable everything
 under spotlight (including "Show Finder search window")
+
+
+## Migrating files across
+
+Best to use rsync v3 (already installed via homebrew) rather than the built-in rsync v2
+
+```bash
+rsync -aHAX --partial --progress \
+  --rsync-path=/opt/homebrew/bin/rsync \
+  --exclude 'node_modules/' --exclude '.venv/' --exclude '._*' \
+  ~/code/ user@192.168.0.1:~/code/
+```

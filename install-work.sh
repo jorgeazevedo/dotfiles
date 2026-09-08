@@ -7,6 +7,11 @@ set -euo pipefail
 
 ln -sf "$PWD/home/.Brewfile.work" ~/.Brewfile.work
 
+# One of the tap's casks still uses the removed `appcast` stanza, so `brew tap`
+# reports a failure even though the clone itself succeeded.
+brew tap guardian/devtools || true
+brew trust --tap guardian/devtools
+
 brew bundle --file ~/.Brewfile.work
 
 mkdir -p ~/.config/gcloud/configurations

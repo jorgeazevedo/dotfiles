@@ -1,8 +1,10 @@
 [core]
 project = datatech-platform-code
+account = jorge.azevedo@guardian.co.uk
 
 [compute]
 region = europe-west2
 
 [run]
 region = europe-west2
+

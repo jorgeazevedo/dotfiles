@@ -41,5 +41,6 @@ ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 
 ./macos/install-terminal.sh
 ./macos/install-keyboard.sh
+./macos/install-desktop.sh
 
 brew bundle --global

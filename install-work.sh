@@ -12,7 +12,7 @@ ln -sf "$PWD/home/.Brewfile.work" ~/.Brewfile.work
 brew tap guardian/devtools || true
 brew trust --tap guardian/devtools
 
-brew bundle --file ~/.Brewfile.work
+brew bundle --file ~/.Brewfile.work --no-upgrade
 
 mkdir -p ~/.config/gcloud/configurations
 ln -sf "$PWD/home/.config/gcloud/configurations/config_default" \

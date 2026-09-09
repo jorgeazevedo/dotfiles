@@ -27,11 +27,13 @@ ln -sf "$PWD/home/.config/git/config" ~/.config/git/config
 # Used by both machine classes, for ~/code/jorgeazevedo.
 ln -sf "$PWD/home/.config/git/identity/jorgeazevedo" ~/.config/git/identity/jorgeazevedo
 
-# Only link skills: Copilot owns the rest of ~/.copilot (config.json, ide, logs).
+# Only link skills and instructions: Copilot owns the rest of ~/.copilot
+# (config.json, ide, logs).
 # ln refuses to replace a real directory and would link inside it instead.
 mkdir -p ~/.copilot
 rm -rf ~/.copilot/skills
 ln -sfn "$PWD/home/.copilot/skills" ~/.copilot/skills
+ln -sf "$PWD/home/.copilot/copilot-instructions.md" ~/.copilot/copilot-instructions.md
 
 ln -sf "$PWD/home/.zshrc" ~/.zshrc
 
@@ -43,4 +45,4 @@ ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 ./macos/install-keyboard.sh
 ./macos/install-desktop.sh
 
-brew bundle --global
+brew bundle --global --no-upgrade

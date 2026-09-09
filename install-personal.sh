@@ -7,7 +7,7 @@ set -euo pipefail
 
 ln -sf "$PWD/home/.Brewfile.personal" ~/.Brewfile.personal
 
-brew bundle --file ~/.Brewfile.personal
+brew bundle --file ~/.Brewfile.personal --no-upgrade
 
 # Identity: ceno by default, overridden under ~/code/jorgeazevedo.
 # Clear any work overlay from a previous install-work.sh run on this machine --

@@ -1,5 +1,8 @@
 # dotfiles
 
+## Mac extra
+Gmail keyboard shortcuts only work if the keyboard is set to `English - US`
+
 ## VSCode + mise
 
 Keep both of these `false` in VSCode user settings:

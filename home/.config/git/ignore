@@ -7,3 +7,5 @@
 .Spotlight-V100
 .Trashes
 .fseventsd
+
+.env

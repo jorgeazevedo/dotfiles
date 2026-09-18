@@ -46,3 +46,5 @@ ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 ./macos/install-desktop.sh
 
 brew bundle --global --no-upgrade
+
+./macos/install-chrome-extensions.sh

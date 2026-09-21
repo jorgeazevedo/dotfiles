@@ -1,3 +1,6 @@
 # Stop the AWS CLI piping output into a pager.
 export AWS_PAGER=""
 unset GIT_EDITOR
+
+# Turn on ** pattern matching
+shopt -s globstar 

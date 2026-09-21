@@ -5,6 +5,19 @@ autoload -Uz compinit
 compinit
 PROMPT='%D{%H:%M:%S} %1~ $ '
 
+# Search ~/.config/recipes.md, a symlink into the dotfiles repo. With no
+# argument, open it to add one.
+recipe() {
+  local file=~/.config/recipes.md
+  if (( $# == 0 )); then
+    "${EDITOR:-vi}" "$file"
+    return
+  fi
+  # RS="" matches a whole blank-line separated block, so a hit prints the
+  # command along with the line saying what it does.
+  awk -v pat="$1" 'BEGIN { RS = ""; ORS = "\n\n"; pat = tolower(pat) } tolower($0) ~ pat' "$file"
+}
+
 # List all listening TCP ports
 # Source: https://boreal.social/post/15-practical-bash-functions-i-use-in-my-bashrc
 ports() {

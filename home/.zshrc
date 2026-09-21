@@ -30,3 +30,44 @@ serve() {
   echo "Serving on http://localhost:$port"
   python3 -m http.server "$port"
 }
+
+# Shell on an EC2 instance by id: sshi <instance-id> <profile>
+# Replaces the deprecated guardian/ssm-scala `ssm ssh`; needs the
+# session-manager-plugin cask.
+sshi() {
+  aws --profile "$2" --region "${AWS_REGION:-eu-west-1}" \
+    ssm start-session --target "$1"
+}
+
+# Same, but resolve the newest running instance from its tags:
+# ssha <app> <stage> <profile>
+ssha() {
+  local profile="$3"
+  local instance
+
+  instance=$(aws --profile "$profile" --region "${AWS_REGION:-eu-west-1}" ec2 describe-instances \
+    --filters "Name=tag:App,Values=$1" "Name=tag:Stage,Values=$2" \
+      "Name=instance-state-name,Values=running" \
+    --query 'Reservations[].Instances[] | sort_by(@, &LaunchTime)[-1].InstanceId' \
+    --output text --no-cli-pager)
+
+  if [[ -n "$instance" && "$instance" != "None" ]]; then
+    sshi "$instance" "$profile"
+    return
+  fi
+
+  echo "Could not find any instance tagged App=$1 Stage=$2 in $profile"
+  echo "\nInstances with a similar App tag:"
+  aws --profile "$profile" --region "${AWS_REGION:-eu-west-1}" ec2 describe-instances \
+    --filters "Name=tag:App,Values=*$1*" \
+    --query 'Reservations[].Instances[].[InstanceId, Tags[?Key==`App`]|[0].Value, Tags[?Key==`Stack`]|[0].Value, Tags[?Key==`Stage`]|[0].Value, LaunchTime]' \
+    --output text --no-cli-pager | column -t
+  return 1
+}
+
+# Tab completion for the <profile> argument.
+_aws_profiles() { compadd ${(f)"$(aws configure list-profiles)"} }
+_sshi() { _arguments ':instance id:' ':profile:_aws_profiles' }
+_ssha() { _arguments ':app:' ':stage:' ':profile:_aws_profiles' }
+compdef _sshi sshi
+compdef _ssha ssha

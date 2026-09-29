@@ -41,6 +41,9 @@ ln -sf "$PWD/home/.zshrc" ~/.zshrc
 
 ln -sf "$PWD/home/.gvimrc" ~/.gvimrc
 
+mkdir -p ~/"Library/Application Support/Code/User"
+ln -sf "$PWD/home/Library/Application Support/Code/User/settings.json" ~/"Library/Application Support/Code/User/settings.json"
+
 ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 
 ./macos/install-terminal.sh

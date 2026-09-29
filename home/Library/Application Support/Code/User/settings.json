@@ -1,0 +1,14 @@
+{
+    "mise.configureExtensionsIncludeGlobalTools": false,
+    "terminal.integrated.suggest.enabled": false,
+    "files.watcherExclude": {
+        "**/.bloop/**": true,
+        "**/.metals/**/*.{java,scala}": true
+    },
+    "terminal.integrated.initialHint": false,
+    "security.promptForLocalFileProtocolHandling": false,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.agentHost.devContainer.enabled": true,
+    "workbench.remoteIndicator.showExtensionRecommendations": false,
+    "git.addAICoAuthor": "chatAndAgent"
+}

@@ -8,6 +8,7 @@
 - Never use `/tmp/` prefer placing temporary files in the root of the workspace.
 - Avoid `python3 -m json.tool`, use `jq` instead
 - Never use `git add -A`, this always leads to commiting more files than you expect
+- When committing, end the commit message with a blank line and the trailer `Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>`
 - When asked to open a PR:
   1. Open it as a draft and write a body with 3 sections as per the template below. Write only a single sentence in the first section.
   2. Add an appropriate label to the PR out of the set (

@@ -9,6 +9,6 @@
     "security.promptForLocalFileProtocolHandling": false,
     "chat.viewSessions.orientation": "stacked",
     "chat.agentHost.devContainer.enabled": true,
-    "workbench.remoteIndicator.showExtensionRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "git.addAICoAuthor": "chatAndAgent"
 }

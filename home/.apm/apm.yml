@@ -1,0 +1,17 @@
+name: jorge_azevedo
+version: 1.0.0
+description: APM project for jorge_azevedo
+author: Jorge Azevedo
+# Global Copilot skills are installed to the legacy Copilot skill path.
+targets:
+  - copilot
+dependencies:
+  apm:
+    - anthropics/claude-plugins-official/plugins/code-simplifier#main
+    - anthropics/skills/skills/frontend-design#main
+    - anthropics/skills/skills/mcp-builder#main
+    - anthropics/skills/skills/pdf#main
+    - jorgeazevedo/skills/skills/validate-github-actions#main
+  mcp: []
+includes: auto
+scripts: {}

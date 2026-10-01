@@ -11,6 +11,10 @@ ln -sf "$PWD/home/.config/devenv/devenv.yaml" ~/.config/devenv/devenv.yaml
 mkdir -p ~/.config/mise
 ln -sf "$PWD/home/.config/mise/config.toml" ~/.config/mise/config.toml
 
+mkdir -p ~/.apm
+ln -sf "$PWD/home/.apm/apm.yml" ~/.apm/apm.yml
+ln -sf "$PWD/home/.apm/apm.lock.yaml" ~/.apm/apm.lock.yaml
+
 # All git config lives under ~/.config/git. Git only honours it while
 # ~/.gitconfig is absent: if both exist it reads both, and ~/.gitconfig wins for
 # single-valued settings such as user.email.
@@ -27,11 +31,12 @@ ln -sf "$PWD/home/.config/git/config" ~/.config/git/config
 # Used by both machine classes, for ~/code/jorgeazevedo.
 ln -sf "$PWD/home/.config/git/identity/jorgeazevedo" ~/.config/git/identity/jorgeazevedo
 
-# Only link skills and instructions: Copilot owns the rest of ~/.copilot
-# (config.json, ide, logs).
-# ln refuses to replace a real directory and would link inside it instead.
+# Only link APM-managed content and instructions: Copilot owns the rest of
+# ~/.copilot (config.json, ide, logs). ln refuses to replace a real directory
+# and would link inside it instead.
 mkdir -p ~/.copilot
-rm -rf ~/.copilot/skills
+rm -rf ~/.copilot/agents ~/.copilot/skills
+ln -sfn "$PWD/home/.copilot/agents" ~/.copilot/agents
 ln -sfn "$PWD/home/.copilot/skills" ~/.copilot/skills
 ln -sf "$PWD/home/.copilot/copilot-instructions.md" ~/.copilot/copilot-instructions.md
 
@@ -51,5 +56,8 @@ ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 ./macos/install-desktop.sh
 
 brew bundle --global --no-upgrade
+
+mise install
+apm install --global --legacy-skill-paths --frozen
 
 ./macos/install-chrome-extensions.sh

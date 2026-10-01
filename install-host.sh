@@ -14,6 +14,8 @@ ln -sf "$PWD/home/.config/mise/config.toml" ~/.config/mise/config.toml
 mkdir -p ~/.apm
 ln -sf "$PWD/home/.apm/apm.yml" ~/.apm/apm.yml
 ln -sf "$PWD/home/.apm/apm.lock.yaml" ~/.apm/apm.lock.yaml
+# Copied, not linked: apm rewrites this file atomically, replacing any symlink.
+cp "$PWD/home/.apm/marketplaces.json" ~/.apm/marketplaces.json
 
 # All git config lives under ~/.config/git. Git only honours it while
 # ~/.gitconfig is absent: if both exist it reads both, and ~/.gitconfig wins for

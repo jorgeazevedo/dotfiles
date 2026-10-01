@@ -7,10 +7,10 @@ targets:
   - copilot
 dependencies:
   apm:
-    - anthropics/claude-plugins-official/plugins/code-simplifier#main
-    - anthropics/skills/skills/frontend-design#main
-    - anthropics/skills/skills/mcp-builder#main
-    - anthropics/skills/skills/pdf#main
+    - anthropics/claude-plugins-official/plugins/code-simplifier
+    - anthropics/skills/skills/frontend-design
+    - anthropics/skills/skills/mcp-builder
+    - anthropics/skills/skills/pdf
     - jorgeazevedo/skills/skills/validate-github-actions#main
   mcp: []
 includes: auto

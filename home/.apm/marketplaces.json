@@ -1,0 +1,25 @@
+{
+  "marketplaces": [
+    {
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "path": ".claude-plugin/marketplace.json",
+      "owner": "anthropics",
+      "repo": "claude-plugins-official"
+    },
+    {
+      "name": "anthropic-agent-skills",
+      "url": "https://github.com/anthropics/skills",
+      "path": ".claude-plugin/marketplace.json",
+      "owner": "anthropics",
+      "repo": "skills"
+    },
+    {
+      "name": "jorgeazevedo-skills",
+      "url": "https://github.com/jorgeazevedo/skills",
+      "path": ".claude-plugin/marketplace.json",
+      "owner": "jorgeazevedo",
+      "repo": "skills"
+    }
+  ]
+}

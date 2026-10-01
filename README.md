@@ -14,6 +14,28 @@ With them on, the `hverlin.mise-vscode` extension writes a `.vscode/settings.jso
 into *every* project you open — including ones with no `mise.toml` — because the
 global tools in `~/.config/mise/config.toml` are enough to trigger it.
 
+## APM (Copilot skills and agents)
+
+`home/` is an APM project: `apm.yml` and `apm.lock.yaml` sit there, and apm
+installs into `home/.github/`, which `install-host.sh` links into `~/.copilot`.
+It is not an `apm install --global`: apm replaces any symlinked file it writes in
+`~/.apm`, and refuses to run at all if `~/.apm` itself is a symlink.
+
+`install-host.sh` runs:
+
+```bash
+cd home && apm install --legacy-skill-paths --frozen
+```
+
+- `--legacy-skill-paths` puts skills in `.github/skills/`, the folder
+  `~/.copilot/skills` links to. Without it apm uses `.agents/skills/`, which
+  nothing links to.
+- `--frozen` installs exactly the commits in `apm.lock.yaml`, and fails if the
+  lockfile is out of sync with `apm.yml`.
+
+To add a skill, add it to `apm.yml`, run the same command without `--frozen`,
+then commit `apm.yml`, `apm.lock.yaml` and the new folder under `home/.github/`.
+
 ## Raycast
 
 To set-up on first run

@@ -1,0 +1,472 @@
+lockfile_version: '1'
+apm_version: 0.32.0
+dependencies:
+- repo_url: anthropics/claude-plugins-official
+  name: code-simplifier
+  host: github.com
+  resolved_commit: ab024cdcfa7ca80be204acd4907656ba5a968589
+  version: 1.0.0
+  virtual_path: plugins/code-simplifier
+  is_virtual: true
+  package_type: apm_package
+  deployed_files:
+  - .github/agents/code-simplifier.agent.md
+  deployed_file_hashes:
+    .github/agents/code-simplifier.agent.md: sha256:2a51e8d210580d9f66ac2ed1226c41f9374565fc275da30d7bb95f65c2cc87bb
+  content_hash: sha256:bab479724b7600d84139a95d19839274377999149f54f2d06e4a671d5cc5c5f5
+- repo_url: anthropics/skills
+  name: frontend-design
+  host: github.com
+  resolved_commit: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+  version: unknown
+  virtual_path: skills/frontend-design
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .github/skills/frontend-design
+  - .github/skills/frontend-design/LICENSE.txt
+  - .github/skills/frontend-design/SKILL.md
+  deployed_file_hashes:
+    .github/skills/frontend-design/LICENSE.txt: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+    .github/skills/frontend-design/SKILL.md: sha256:d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3
+  content_hash: sha256:89496d5dd00f4810205f351759594fc2742bf8eea85a2f2b2d1de59f4bd91576
+- repo_url: anthropics/skills
+  name: mcp-builder
+  host: github.com
+  resolved_commit: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+  version: unknown
+  virtual_path: skills/mcp-builder
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .github/skills/mcp-builder
+  - .github/skills/mcp-builder/LICENSE.txt
+  - .github/skills/mcp-builder/SKILL.md
+  - .github/skills/mcp-builder/reference/evaluation.md
+  - .github/skills/mcp-builder/reference/mcp_best_practices.md
+  - .github/skills/mcp-builder/reference/node_mcp_server.md
+  - .github/skills/mcp-builder/reference/python_mcp_server.md
+  - .github/skills/mcp-builder/scripts/connections.py
+  - .github/skills/mcp-builder/scripts/evaluation.py
+  - .github/skills/mcp-builder/scripts/example_evaluation.xml
+  - .github/skills/mcp-builder/scripts/requirements.txt
+  deployed_file_hashes:
+    .github/skills/mcp-builder/LICENSE.txt: sha256:bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362
+    .github/skills/mcp-builder/SKILL.md: sha256:0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295
+    .github/skills/mcp-builder/reference/evaluation.md: sha256:8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427
+    .github/skills/mcp-builder/reference/mcp_best_practices.md: sha256:80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007
+    .github/skills/mcp-builder/reference/node_mcp_server.md: sha256:c3ba35a4f599dd53be9c6555ae72c19a7bf412cd5426576c2c08d42755482c66
+    .github/skills/mcp-builder/reference/python_mcp_server.md: sha256:2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80
+    .github/skills/mcp-builder/scripts/connections.py: sha256:9403668a2041568772082a8b334122c1f88daf0541fb393af4522d0094a47a6e
+    .github/skills/mcp-builder/scripts/evaluation.py: sha256:49ed1d17cdce5da101b210197740713f49b935c29d4f339542a14b132658e6f7
+    .github/skills/mcp-builder/scripts/example_evaluation.xml: sha256:9272b348ddcc4b06ba562367ccd0770e018158c0068ac5116d5e34aaeff8777a
+    .github/skills/mcp-builder/scripts/requirements.txt: sha256:d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7
+  content_hash: sha256:09dbc5304106f99933581f90b5181657a3f1981c7adddf1880fb8eaf2e357378
+- repo_url: anthropics/skills
+  name: pdf
+  host: github.com
+  resolved_commit: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+  version: unknown
+  virtual_path: skills/pdf
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .github/skills/pdf
+  - .github/skills/pdf/LICENSE.txt
+  - .github/skills/pdf/SKILL.md
+  - .github/skills/pdf/forms.md
+  - .github/skills/pdf/reference.md
+  - .github/skills/pdf/scripts/check_bounding_boxes.py
+  - .github/skills/pdf/scripts/check_fillable_fields.py
+  - .github/skills/pdf/scripts/convert_pdf_to_images.py
+  - .github/skills/pdf/scripts/create_validation_image.py
+  - .github/skills/pdf/scripts/extract_form_field_info.py
+  - .github/skills/pdf/scripts/extract_form_structure.py
+  - .github/skills/pdf/scripts/fill_fillable_fields.py
+  - .github/skills/pdf/scripts/fill_pdf_form_with_annotations.py
+  deployed_file_hashes:
+    .github/skills/pdf/LICENSE.txt: sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa
+    .github/skills/pdf/SKILL.md: sha256:9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c
+    .github/skills/pdf/forms.md: sha256:9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44
+    .github/skills/pdf/reference.md: sha256:03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95
+    .github/skills/pdf/scripts/check_bounding_boxes.py: sha256:0ced522402dd7b3c82a0be9518cf4e485fa9cc0467d7beab6ddb04cb36fcc3e1
+    .github/skills/pdf/scripts/check_fillable_fields.py: sha256:1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8
+    .github/skills/pdf/scripts/convert_pdf_to_images.py: sha256:7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d
+    .github/skills/pdf/scripts/create_validation_image.py: sha256:8fa9fd7962c9f940045b81cf6b991e7c1057c1838e3f9cc6d305007a222ffebf
+    .github/skills/pdf/scripts/extract_form_field_info.py: sha256:bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109
+    .github/skills/pdf/scripts/extract_form_structure.py: sha256:6814e3fe8f78c2b16d766c132b5a727ff7a31b71d76a7d46bd6e40fe50bc97c5
+    .github/skills/pdf/scripts/fill_fillable_fields.py: sha256:d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5
+    .github/skills/pdf/scripts/fill_pdf_form_with_annotations.py: sha256:8a56e063a49ed53c0b0e1d312ecf8023af76816ed139486ec3b539873de202fd
+  content_hash: sha256:69e2ac9eb2bbe2881df26acc53b46b39a15cfda206f5357e5f9c83feb0fadcc7
+- repo_url: jorgeazevedo/skills
+  name: validate-github-actions
+  host: github.com
+  resolved_commit: 31e7752a43edc1cd89a2f08d3573427b4a78b031
+  resolved_ref: main
+  version: unknown
+  virtual_path: skills/validate-github-actions
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .github/skills/validate-github-actions
+  - .github/skills/validate-github-actions/SKILL.md
+  deployed_file_hashes:
+    .github/skills/validate-github-actions/SKILL.md: sha256:0b6cb506931618e648ba13644b1fd8f9c94bec74af6f33a508cbb1396d14b10c
+  content_hash: sha256:40899c79e49b879e5a862b0522a03f8c2e24b1025413c31e37c16f8eda817ccf
+- repo_url: mattpocock/skills
+  name: grill-me
+  host: github.com
+  resolved_commit: d81f3a183412e71a5b1e84ca21bc1a35eea03a60
+  version: unknown
+  virtual_path: skills/productivity/grill-me
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .github/skills/grill-me
+  - .github/skills/grill-me/SKILL.md
+  - .github/skills/grill-me/agents/openai.yaml
+  deployed_file_hashes:
+    .github/skills/grill-me/SKILL.md: sha256:caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637
+    .github/skills/grill-me/agents/openai.yaml: sha256:c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b
+  content_hash: sha256:fe33aaa8e8dcd606107b1bfe3109f257b4a7e0f4907afd6506b62ccfb73cd1d3
+- repo_url: mattpocock/skills
+  name: grilling
+  host: github.com
+  resolved_commit: d81f3a183412e71a5b1e84ca21bc1a35eea03a60
+  version: unknown
+  virtual_path: skills/productivity/grilling
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .github/skills/grilling
+  - .github/skills/grilling/SKILL.md
+  - .github/skills/grilling/agents/openai.yaml
+  deployed_file_hashes:
+    .github/skills/grilling/SKILL.md: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
+    .github/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
+  content_hash: sha256:e98f109bca3d8889f673d9f32bf84086f85a70ff9e241f8a34a4560a07ab5a39
+deployments:
+- kind: project-relative
+  target: copilot
+  value: .github/agents/code-simplifier.agent.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/claude-plugins-official/plugins/code-simplifier
+  active_owner: anthropics/claude-plugins-official/plugins/code-simplifier
+  content_hash: sha256:2a51e8d210580d9f66ac2ed1226c41f9374565fc275da30d7bb95f65c2cc87bb
+- kind: project-relative
+  target: copilot
+  value: .github/skills/frontend-design
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: null
+- kind: project-relative
+  target: copilot
+  value: .github/skills/frontend-design/LICENSE.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+- kind: project-relative
+  target: copilot
+  value: .github/skills/frontend-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: sha256:d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3
+- kind: project-relative
+  target: copilot
+  value: .github/skills/grill-me
+  runtime: null
+  scope: project
+  owners:
+  - mattpocock/skills/skills/productivity/grill-me
+  active_owner: mattpocock/skills/skills/productivity/grill-me
+  content_hash: null
+- kind: project-relative
+  target: copilot
+  value: .github/skills/grill-me/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - mattpocock/skills/skills/productivity/grill-me
+  active_owner: mattpocock/skills/skills/productivity/grill-me
+  content_hash: sha256:caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637
+- kind: project-relative
+  target: copilot
+  value: .github/skills/grill-me/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - mattpocock/skills/skills/productivity/grill-me
+  active_owner: mattpocock/skills/skills/productivity/grill-me
+  content_hash: sha256:c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b
+- kind: project-relative
+  target: copilot
+  value: .github/skills/grilling
+  runtime: null
+  scope: project
+  owners:
+  - mattpocock/skills/skills/productivity/grilling
+  active_owner: mattpocock/skills/skills/productivity/grilling
+  content_hash: null
+- kind: project-relative
+  target: copilot
+  value: .github/skills/grilling/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - mattpocock/skills/skills/productivity/grilling
+  active_owner: mattpocock/skills/skills/productivity/grilling
+  content_hash: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
+- kind: project-relative
+  target: copilot
+  value: .github/skills/grilling/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - mattpocock/skills/skills/productivity/grilling
+  active_owner: mattpocock/skills/skills/productivity/grilling
+  content_hash: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: null
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/LICENSE.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/reference/evaluation.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/reference/mcp_best_practices.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/reference/node_mcp_server.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:c3ba35a4f599dd53be9c6555ae72c19a7bf412cd5426576c2c08d42755482c66
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/reference/python_mcp_server.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/scripts/connections.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:9403668a2041568772082a8b334122c1f88daf0541fb393af4522d0094a47a6e
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/scripts/evaluation.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:49ed1d17cdce5da101b210197740713f49b935c29d4f339542a14b132658e6f7
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/scripts/example_evaluation.xml
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:9272b348ddcc4b06ba562367ccd0770e018158c0068ac5116d5e34aaeff8777a
+- kind: project-relative
+  target: copilot
+  value: .github/skills/mcp-builder/scripts/requirements.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/mcp-builder
+  active_owner: anthropics/skills/skills/mcp-builder
+  content_hash: sha256:d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: null
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/LICENSE.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/forms.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/reference.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/check_bounding_boxes.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:0ced522402dd7b3c82a0be9518cf4e485fa9cc0467d7beab6ddb04cb36fcc3e1
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/check_fillable_fields.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/convert_pdf_to_images.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/create_validation_image.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:8fa9fd7962c9f940045b81cf6b991e7c1057c1838e3f9cc6d305007a222ffebf
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/extract_form_field_info.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/extract_form_structure.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:6814e3fe8f78c2b16d766c132b5a727ff7a31b71d76a7d46bd6e40fe50bc97c5
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/fill_fillable_fields.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5
+- kind: project-relative
+  target: copilot
+  value: .github/skills/pdf/scripts/fill_pdf_form_with_annotations.py
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/pdf
+  active_owner: anthropics/skills/skills/pdf
+  content_hash: sha256:8a56e063a49ed53c0b0e1d312ecf8023af76816ed139486ec3b539873de202fd
+- kind: project-relative
+  target: copilot
+  value: .github/skills/validate-github-actions
+  runtime: null
+  scope: project
+  owners:
+  - jorgeazevedo/skills/skills/validate-github-actions
+  active_owner: jorgeazevedo/skills/skills/validate-github-actions
+  content_hash: null
+- kind: project-relative
+  target: copilot
+  value: .github/skills/validate-github-actions/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - jorgeazevedo/skills/skills/validate-github-actions
+  active_owner: jorgeazevedo/skills/skills/validate-github-actions
+  content_hash: sha256:0b6cb506931618e648ba13644b1fd8f9c94bec74af6f33a508cbb1396d14b10c

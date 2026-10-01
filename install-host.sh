@@ -12,8 +12,11 @@ mkdir -p ~/.config/mise
 ln -sf "$PWD/home/.config/mise/config.toml" ~/.config/mise/config.toml
 
 mkdir -p ~/.apm
-ln -sf "$PWD/home/.apm/apm.yml" ~/.apm/apm.yml
-ln -sf "$PWD/home/.apm/apm.lock.yaml" ~/.apm/apm.lock.yaml
+# Earlier versions installed at user scope, from a linked ~/.apm/apm.yml. Skills
+# are now an apm project in home/, so drop that state.
+if [ -L ~/.apm/apm.yml ]; then
+	rm -rf ~/.apm/apm.yml ~/.apm/apm.lock.yaml ~/.apm/apm_modules
+fi
 # Copied, not linked: apm rewrites this file atomically, replacing any symlink.
 cp "$PWD/home/.apm/marketplaces.json" ~/.apm/marketplaces.json
 
@@ -38,9 +41,9 @@ ln -sf "$PWD/home/.config/git/identity/jorgeazevedo" ~/.config/git/identity/jorg
 # and would link inside it instead.
 mkdir -p ~/.copilot
 rm -rf ~/.copilot/agents ~/.copilot/skills
-ln -sfn "$PWD/home/.copilot/agents" ~/.copilot/agents
-ln -sfn "$PWD/home/.copilot/skills" ~/.copilot/skills
-ln -sf "$PWD/home/.copilot/copilot-instructions.md" ~/.copilot/copilot-instructions.md
+ln -sfn "$PWD/home/.github/agents" ~/.copilot/agents
+ln -sfn "$PWD/home/.github/skills" ~/.copilot/skills
+ln -sf "$PWD/home/.github/copilot-instructions.md" ~/.copilot/copilot-instructions.md
 
 ln -sf "$PWD/home/.config/recipes.md" ~/.config/recipes.md
 
@@ -60,6 +63,6 @@ ln -sf "$PWD/home/.Brewfile" ~/.Brewfile
 brew bundle --global --no-upgrade
 
 mise install
-apm install --global --legacy-skill-paths --frozen
+(cd home && apm install --legacy-skill-paths --frozen)
 
 ./macos/install-chrome-extensions.sh

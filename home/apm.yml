@@ -2,7 +2,10 @@ name: jorge_azevedo
 version: 1.0.0
 description: APM project for jorge_azevedo
 author: Jorge Azevedo
-# Global Copilot skills are installed to the legacy Copilot skill path.
+# A project, not a user-scope install, so apm.yml and apm.lock.yaml stay plain
+# files in this repo. Copilot's project layout is .github/, which
+# install-host.sh links into ~/.copilot. Unlike the rest of home/, none of these
+# mirror a path in ~.
 targets:
   - copilot
 dependencies:
@@ -12,6 +15,9 @@ dependencies:
     - anthropics/skills/skills/mcp-builder
     - anthropics/skills/skills/pdf
     - jorgeazevedo/skills/skills/validate-github-actions#main
+    # grill-me only invokes grilling, which holds the actual instructions.
+    - mattpocock/skills/skills/productivity/grill-me
+    - mattpocock/skills/skills/productivity/grilling
   mcp: []
 includes: auto
 scripts: {}

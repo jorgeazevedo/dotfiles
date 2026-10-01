@@ -12,4 +12,4 @@ mkdir -p ~/.config/git
 cp -R home/.config/git/. ~/.config/git/
 
 mkdir -p ~/.copilot
-cp -R home/.copilot/. ~/.copilot/
+cp -R home/.github/. ~/.copilot/

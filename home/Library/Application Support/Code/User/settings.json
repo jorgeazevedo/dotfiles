@@ -6,6 +6,7 @@
         "**/.metals/**/*.{java,scala}": true
     },
     "terminal.integrated.initialHint": false,
+    "terminal.integrated.scrollback": 100000,
     "security.promptForLocalFileProtocolHandling": false,
     "chat.viewSessions.orientation": "stacked",
     "chat.agentHost.devContainer.enabled": true,

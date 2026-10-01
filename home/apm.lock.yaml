@@ -101,7 +101,7 @@ dependencies:
 - repo_url: jorgeazevedo/skills
   name: validate-github-actions
   host: github.com
-  resolved_commit: 31e7752a43edc1cd89a2f08d3573427b4a78b031
+  resolved_commit: 0aaf49e3b0ad9715e9810002f4608fd5899af471
   resolved_ref: main
   version: unknown
   virtual_path: skills/validate-github-actions
@@ -111,8 +111,8 @@ dependencies:
   - .github/skills/validate-github-actions
   - .github/skills/validate-github-actions/SKILL.md
   deployed_file_hashes:
-    .github/skills/validate-github-actions/SKILL.md: sha256:0b6cb506931618e648ba13644b1fd8f9c94bec74af6f33a508cbb1396d14b10c
-  content_hash: sha256:40899c79e49b879e5a862b0522a03f8c2e24b1025413c31e37c16f8eda817ccf
+    .github/skills/validate-github-actions/SKILL.md: sha256:2fbe2c26cb628987212cf7cf26331b2b7f6f1bcfd206463c7cf6e8e75db53f1c
+  content_hash: sha256:6ea6fb56658ca55d445631170a12c4fd9a3f0240803c06ec6a3da8a3eadb1e14
 - repo_url: mattpocock/skills
   name: grill-me
   host: github.com
@@ -469,4 +469,4 @@ deployments:
   owners:
   - jorgeazevedo/skills/skills/validate-github-actions
   active_owner: jorgeazevedo/skills/skills/validate-github-actions
-  content_hash: sha256:0b6cb506931618e648ba13644b1fd8f9c94bec74af6f33a508cbb1396d14b10c
+  content_hash: sha256:2fbe2c26cb628987212cf7cf26331b2b7f6f1bcfd206463c7cf6e8e75db53f1c

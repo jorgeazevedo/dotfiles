@@ -10,5 +10,21 @@
     "chat.viewSessions.orientation": "stacked",
     "chat.agentHost.devContainer.enabled": true,
     "extensions.ignoreRecommendations": true,
-    "git.addAICoAuthor": "chatAndAgent"
+    "git.addAICoAuthor": "chatAndAgent",
+    "editor.minimap.enabled": false,
+    "editor.inlineSuggest.enabled": false,
+    "jestrunner.runOptions": [
+        ""
+    ],
+    "jestrunner.jestCommand": "node --experimental-vm-modules 'node_modules/.bin/jest'",
+    "jestrunner.debugOptions": {
+        "runtimeArgs": [
+            "--experimental-vm-modules"
+        ]
+    },
+    "workbench.iconTheme": "vs-seti-folder",
+    "claudeCode.preferredLocation": "sidebar",
+    "claudeCode.allowDangerouslySkipPermissions": true,
+    "claudeCode.initialPermissionMode": "acceptEdits",
+    "claudeCode.hideOnboarding": true
 }

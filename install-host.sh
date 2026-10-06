@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Link shared config into your home directory.
 # Run this from the dotfiles repo root, on a Mac.
-# Prefer install-personal.sh or install-work.sh -- neither identity nor the
-# machine-only apps are set up by this script alone.
+# Prefer install-personal-host.sh or install-work-host.sh -- neither identity
+# nor the machine-only apps are set up by this script alone.
 set -euo pipefail
 
 mkdir -p ~/.config/devenv

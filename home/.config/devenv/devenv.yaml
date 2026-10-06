@@ -1,11 +1,10 @@
 plugins:
   vscode:
     - "fuadpashayev.bottom-terminal"
-    - "l-igh-t.vscode-theme-seti-folder"
   intellij:
     - "com.github.copilot"
     - "com.mallowigi"
 dotfiles:
   repository: "https://github.com/jorgeazevedo/dotfiles"
   targetPath: "~/dotfiles"
-  installCommand: "./install-devcontainer.sh"
+  installCommand: "./install.sh"

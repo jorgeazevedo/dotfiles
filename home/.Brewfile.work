@@ -1,4 +1,4 @@
-# Layered on top of .Brewfile by install-work.sh.
+# Layered on top of .Brewfile by install-work-host.sh.
 tap "guardian/devtools"
 
 brew "guardian/devtools/dev-nginx"

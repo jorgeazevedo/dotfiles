@@ -19,8 +19,8 @@ ln -sf "$PWD/home/.config/gcloud/configurations/config_default" \
 	~/.config/gcloud/configurations/config_default
 
 # Identity: work by default, overridden under ~/code/jorgeazevedo.
-# Clear any personal overlay from a previous install-personal.sh run on this
-# machine -- a stale one is not "missing", so git would still apply it.
+# Clear any personal overlay from a previous install-personal-host.sh run on
+# this machine -- a stale one is not "missing", so git would still apply it.
 rm -f ~/.config/git/config.personal
 ln -sf "$PWD/home/.config/git/identity/guardian" ~/.config/git/identity/guardian
 ln -sf "$PWD/home/.config/git/config.work" ~/.config/git/config.work

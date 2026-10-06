@@ -10,6 +10,12 @@
     "security.promptForLocalFileProtocolHandling": false,
     "chat.viewSessions.orientation": "stacked",
     "chat.agentHost.devContainer.enabled": true,
+    "dev.containers.defaultExtensions": [
+        "ms-vscode.live-server",
+        "fuadpashayev.bottom-terminal",
+        "l-igh-t.vscode-theme-seti-folder"
+    ],
+    "dotfiles.repository": "jorgeazevedo/dotfiles",
     "extensions.ignoreRecommendations": true,
     "git.addAICoAuthor": "chatAndAgent",
     "editor.minimap.enabled": false,

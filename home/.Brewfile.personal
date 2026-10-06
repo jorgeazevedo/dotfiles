@@ -1,4 +1,4 @@
-# Layered on top of .Brewfile by install-personal.sh.
+# Layered on top of .Brewfile by install-personal-host.sh.
 brew "googleworkspace-cli"
 
 cask "claude-code"

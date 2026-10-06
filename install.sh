@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Run by devenv inside the devcontainer, from this repo's root.
+# Run inside the devcontainer, from this repo's root. VS Code Dev Containers
+# picks it up by name (dotfiles.repository in settings.json); devenv.yaml names
+# it explicitly.
 set -euo pipefail
 
 sudo apt-get update -y

@@ -1,4 +1,4 @@
-; Personal machine. Linked by install-personal.sh.
+; Personal machine. Linked by install-personal-host.sh.
 ; Default identity first, then per-directory overrides -- last match wins.
 [include]
 	path = identity/ceno

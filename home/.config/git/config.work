@@ -1,4 +1,4 @@
-; Work machine. Linked by install-work.sh.
+; Work machine. Linked by install-work-host.sh.
 ; Default identity first, then per-directory overrides -- last match wins.
 [include]
 	path = identity/guardian

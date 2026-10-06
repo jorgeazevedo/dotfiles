@@ -41,8 +41,8 @@
 	insteadOf = git@github.com:jorgeazevedo/
 
 ; Include paths are relative to this file, i.e. to ~/.config/git/.
-; install-personal.sh / install-work.sh links exactly one of these and removes
-; the other. Git ignores an include whose file does not exist.
+; install-personal-host.sh / install-work-host.sh links exactly one of these and
+; removes the other. Git ignores an include whose file does not exist.
 [include]
 	path = config.personal
 	path = config.work

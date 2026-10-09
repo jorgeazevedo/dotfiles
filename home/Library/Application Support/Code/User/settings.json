@@ -8,7 +8,6 @@
     "terminal.integrated.initialHint": false,
     "terminal.integrated.scrollback": 100000,
     "security.promptForLocalFileProtocolHandling": false,
-    "chat.viewSessions.orientation": "stacked",
     "chat.agentHost.devContainer.enabled": true,
     "dev.containers.defaultExtensions": [
         "ms-vscode.live-server",
@@ -33,5 +32,10 @@
     "claudeCode.preferredLocation": "sidebar",
     "claudeCode.allowDangerouslySkipPermissions": true,
     "claudeCode.initialPermissionMode": "acceptEdits",
-    "claudeCode.hideOnboarding": true
+    "claudeCode.hideOnboarding": true,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.plugins.marketplaces": [
+        "github/awesome-copilot#marketplace",
+        "guardian/agent-skills"
+    ]
 }

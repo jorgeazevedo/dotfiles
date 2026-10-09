@@ -6,3 +6,4 @@ python = 'latest'
 uv = 'latest'
 apm = '0.32.0'
 "github:guardian/devenv" = "latest"
+"github:github/copilot-cli" = "latest"

@@ -65,4 +65,8 @@ brew bundle --global --no-upgrade
 mise install
 (cd home && apm install --legacy-skill-paths --frozen)
 
+# Lets dev containers reuse gh's token via VS Code's git credential forwarding.
+# Kept out of ~/.config/git/config, which links into this repo and is copied into containers.
+GIT_CONFIG_GLOBAL=~/.config/git/config.host gh auth setup-git --hostname github.com --force
+
 ./macos/install-chrome-extensions.sh

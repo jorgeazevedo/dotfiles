@@ -43,6 +43,8 @@
 ; Include paths are relative to this file, i.e. to ~/.config/git/.
 ; install-personal-host.sh / install-work-host.sh links exactly one of these and
 ; removes the other. Git ignores an include whose file does not exist.
+; config.host is written by install-host.sh and exists only on the Mac.
 [include]
 	path = config.personal
 	path = config.work
+	path = config.host

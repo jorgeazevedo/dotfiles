@@ -9,6 +9,8 @@
     "terminal.integrated.scrollback": 100000,
     "security.promptForLocalFileProtocolHandling": false,
     "chat.agentHost.devContainer.enabled": true,
+    "chat.defaultToCopilotHarness": false,
+    "chat.editor.preferCopilotHarness": false,
     "dev.containers.defaultExtensions": [
         "ms-vscode.live-server",
         "fuadpashayev.bottom-terminal",
@@ -33,9 +35,20 @@
     "claudeCode.allowDangerouslySkipPermissions": true,
     "claudeCode.initialPermissionMode": "acceptEdits",
     "claudeCode.hideOnboarding": true,
-    "chat.viewSessions.orientation": "stacked",
     "chat.plugins.marketplaces": [
         "github/awesome-copilot#marketplace",
         "guardian/agent-skills"
-    ]
+    ],
+    "chat.agentHost.agentDebugLog.enabled": true,
+    "github.copilot.chat.agentDebugLog.fileLogging.enabled": true,
+    "chat.agentHost.ahpJsonlLoggingEnabled": true,
+    "github.copilot.chat.otel.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "redhat.telemetry.enabled": false,
+    "chat.viewSessions.orientation": "stacked"
 }

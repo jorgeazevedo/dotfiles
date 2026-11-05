@@ -31,18 +31,24 @@ serve() {
   python3 -m http.server "$port"
 }
 
-# Shell on an EC2 instance by id: sshi <instance-id> <profile>
+# Shell on an EC2 instance by id: sshi <instance-id> [profile]
 # Replaces the deprecated guardian/ssm-scala `ssm ssh`; needs the
 # session-manager-plugin cask.
 sshi() {
-  aws --profile "$2" --region "${AWS_REGION:-eu-west-1}" \
+  local app stage
+  read -r app stage < <(aws --profile "${2:-deployTools}" --region "${AWS_REGION:-eu-west-1}" \
+    ec2 describe-instances --instance-ids "$1" \
+    --query 'Reservations[0].Instances[0].[Tags[?Key==`App`]|[0].Value, Tags[?Key==`Stage`]|[0].Value]' \
+    --output text --no-cli-pager)
+  echo "Connecting to $1 (App=$app Stage=$stage)"
+  aws --profile "${2:-deployTools}" --region "${AWS_REGION:-eu-west-1}" \
     ssm start-session --target "$1"
 }
 
 # Same, but resolve the newest running instance from its tags:
-# ssha <app> <stage> <profile>
+# ssha <app> <stage> [profile]
 ssha() {
-  local profile="$3"
+  local profile="${3:-deployTools}"
   local instance
 
   instance=$(aws --profile "$profile" --region "${AWS_REGION:-eu-west-1}" ec2 describe-instances \

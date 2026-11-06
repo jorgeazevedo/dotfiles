@@ -45,7 +45,7 @@ ln -sfn "$PWD/home/.github/agents" ~/.copilot/agents
 ln -sfn "$PWD/home/.github/skills" ~/.copilot/skills
 ln -sf "$PWD/home/.github/copilot-instructions.md" ~/.copilot/copilot-instructions.md
 
-ln -sf "$PWD/home/.config/recipes.md" ~/.config/recipes.md
+ln -sf "$PWD/home/.config/snippets.md" ~/.config/snippets.md
 
 ln -sf "$PWD/home/.zshrc" ~/.zshrc
 

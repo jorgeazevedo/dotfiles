@@ -3,3 +3,6 @@ ssh -N -L 8080:localhost:80 user@host
 
 ## docker: throwaway ubuntu shell
 docker run --rm -it ubuntu bash
+
+## ssh: list keys loaded in the agent (useful to debug dev containers)
+ssh-add -l

@@ -5,6 +5,9 @@ autoload -Uz compinit
 compinit
 PROMPT='%D{%H:%M:%S} %1~ $ '
 
+# Don't exit on an accidental Ctrl-D; use `exit` instead.
+setopt IGNORE_EOF
+
 # Search ~/.config/recipes.md, a symlink into the dotfiles repo. With no
 # argument, open it to add one.
 recipe() {

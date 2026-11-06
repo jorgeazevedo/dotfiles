@@ -12,6 +12,7 @@ cp home/.bash_aliases ~/.bash_aliases
 
 mkdir -p ~/.config/git
 cp -R home/.config/git/. ~/.config/git/
+cp home/.config/snippets.md ~/.config/snippets.md
 
 mkdir -p ~/.copilot
 cp -R home/.github/. ~/.copilot/

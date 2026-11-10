@@ -1,6 +1,4 @@
 # Ways of working
-- Always use `manage_todo_list` to outline the actions you need to take befora taking them.
-- Always validate a github workflow yml after editing it.
 - When loading skill files referenced by other skills, use read_file with the absolute path from the skill listing — do not use file_search.
 - Always use `mise` and the `.tool-versions` file to manage runtime versions and cli tools. Don't use `mise.toml` or `brew`.
 - Always use the `create_file` tool to create scripts

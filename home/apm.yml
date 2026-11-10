@@ -14,6 +14,7 @@ dependencies:
     - anthropics/skills/skills/frontend-design
     - anthropics/skills/skills/mcp-builder
     - anthropics/skills/skills/pdf
+    - cloudflare/security-audit-skill/skills/security-audit
     - jorgeazevedo/skills/skills/validate-github-actions#main
     # grill-me only invokes grilling, which holds the actual instructions.
     - mattpocock/skills/skills/productivity/grill-me
